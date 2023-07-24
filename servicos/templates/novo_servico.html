@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'clientes/css/clientes.css' %}">
+    <title>Adicionar Serviço</title>
+{% endblock %}
+
+{% block 'dashboard' %}
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h1>Adicionar serviço</h1>
+
+        <form action="{% url 'novo_servico' %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <input type="submit" class="btn btn-success" value="Salvar">
+        </form>
+
+    </div>
+{% endblock %}
