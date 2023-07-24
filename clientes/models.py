@@ -8,7 +8,7 @@ class Cliente(models.Model):
     cpf = models.CharField('CPF', max_length=12)
 
     def __str__(self):
-        return self.nome
+        return f'{self.nome} {self.sobrenome}'
 
 
 class Carro(models.Model):
