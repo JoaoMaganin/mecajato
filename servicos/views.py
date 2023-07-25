@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import FormServico
 from django.http import HttpResponse, FileResponse
 from .models import Servico
 
 from fpdf import FPDF
 from io import BytesIO
+import json
 
 
 def novo_servico(request):

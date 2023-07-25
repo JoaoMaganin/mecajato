@@ -1,0 +1,1 @@
+web: gunicorn mecajato.wsgi --log-file -
